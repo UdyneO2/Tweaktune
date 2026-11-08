@@ -1,0 +1,11 @@
+<resources>
+    <color name="t_surface">@android:color/system_neutral1_900</color>
+    <color name="t_card">@android:color/system_neutral2_800</color>
+    <color name="t_on_surface">@android:color/system_neutral1_100</color>
+    <color name="t_on_variant">@android:color/system_neutral2_200</color>
+    <color name="t_outline">@android:color/system_neutral2_400</color>
+    <color name="t_primary">@android:color/system_accent1_200</color>
+    <color name="t_on_primary">@android:color/system_accent1_800</color>
+    <color name="t_container">@android:color/system_accent1_700</color>
+    <color name="t_on_container">@android:color/system_accent1_100</color>
+</resources>

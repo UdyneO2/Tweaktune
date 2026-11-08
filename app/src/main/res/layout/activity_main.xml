@@ -1,0 +1,211 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/t_surface"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/t_on_variant"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Tweak Tuner"
+                    android:textColor="@color/t_on_surface"
+                    android:textSize="34sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnTheme"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_circle"
+                android:clickable="false"
+                android:contentDescription="Tema malam"
+                android:focusable="true"
+                android:padding="12dp"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:paddingBottom="110dp"
+            android:scrollbars="none"/>
+
+            <include layout="@layout/page_launcher"/>
+            <include layout="@layout/page_terminal"/>
+            <include layout="@layout/page_about"/>
+            <include layout="@layout/page_settings"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Floating nav: 1 baris 4 menu -->
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_nav"
+        android:elevation="12dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/navLauncher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView android:id="@+id/navLauncherIcon" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_launcher" android:importantForAccessibility="no"/>
+            <TextView android:id="@+id/navLauncherText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Script" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navTerminal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView android:id="@+id/navTerminalIcon" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_terminal" android:importantForAccessibility="no"/>
+            <TextView android:id="@+id/navTerminalText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Terminal" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView android:id="@+id/navAboutIcon" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_about" android:importantForAccessibility="no"/>
+            <TextView android:id="@+id/navAboutText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Tentang" android:textSize="11sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView android:id="@+id/navSettingsIcon" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_settings" android:importantForAccessibility="no"/>
+            <TextView android:id="@+id/navSettingsText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Setelan" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Panel log: muncul saat perintah berjalan -->
+    <LinearLayout
+        android:id="@+id/logPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/bg_card"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/logDot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_badge_ok"/>
+
+            <TextView
+                android:id="@+id/tvLogState"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="Log"
+                android:textColor="@color/t_on_surface"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnCloseLog"
+                style="@style/Tweak.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:text="Tutup"/>
+        </LinearLayout>
+
+        <com.tweak.tuner.MaxHeightScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textColor="@color/t_on_variant"
+                android:textIsSelectable="true"
+                android:textSize="12sp"/>
+        </com.tweak.tuner.MaxHeightScrollView>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,249 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/t_surface"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/hero"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_circle"
+            android:gravity="center"
+            android:text="👾"
+            android:textSize="45sp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tweak Tuner"
+            android:textColor="@color/t_on_surface"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Siapkan dua hal ini sebelum mulai"
+            android:textColor="@color/t_on_variant"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_chip"
+            android:paddingStart="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/t_on_container"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+        <!-- Identifikasi perangkat (opsional) -->
+<LinearLayout
+    android:id="@+id/cardId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        style="@style/TweakSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identifikasi perangkat"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cek seberapa cocok perangkatmu dengan aplikasi ini (nilai 0 sampai 10). Opsional dan tanpa izin apa pun."
+        android:textColor="@color/t_on_variant"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/idResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/t_primary"
+            android:textSize="44sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvVerdict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/t_on_surface"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvRows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/t_on_variant"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSkip"
+            style="@style/Tweak.Button.Tonal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lewati"/>
+
+        <Button
+            android:id="@+id/btnIdentify"
+            style="@style/Tweak.Button.Filled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Cek dukungan"/>
+    </LinearLayout>
+</LinearLayout>
+
+        <!-- Langkah 1 -->
+        <LinearLayout
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/badge1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_badge"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/t_on_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TweakSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jalankan Shizuku"/>
+
+                <TextView
+                    android:id="@+id/tvStep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/t_on_variant"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/btnOpen"
+                    style="@style/Tweak.Button.Tonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Buka Shizuku"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Langkah 2 -->
+        <LinearLayout
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/badge2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_badge"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/t_on_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TweakSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beri izin"/>
+
+                <TextView
+                    android:id="@+id/tvStep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/t_on_variant"
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/btnGrant"
+                    style="@style/Tweak.Button.Filled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Beri izin Shizuku"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Shizuku bisa dinyalakan lewat Debugging nirkabel atau root. Pengaturan ini hanya perlu dilakukan sekali tiap boot."
+            android:textColor="@color/t_on_variant"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<resources>
+    <color name="t_surface">#F2F2EE</color>
+    <color name="t_card">#FFFFFF</color>
+    <color name="t_on_surface">#111111</color>
+    <color name="t_on_variant">#6B6B70</color>
+    <color name="t_outline">#D5D5CF</color>
+    <color name="t_primary">#C6F135</color>
+    <color name="t_on_primary">#0B0B0C</color>
+    <color name="t_container">#E7E7E1</color>
+    <color name="t_on_container">#111111</color>
+    <color name="t_ok">#C6F135</color>
+    <color name="t_on_ok">#0B0B0C</color>
+    <color name="t_accent_text">#4A6100</color>
+</resources>

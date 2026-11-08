@@ -1,0 +1,17 @@
+<resources>
+    <style name="Theme.Tweak" parent="android:Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/t_surface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:colorAccent">@color/t_accent_text</item>
+        <item name="android:colorControlActivated">@color/t_accent_text</item>
+        <item name="android:textColorPrimary">@color/t_on_surface</item>
+        <item name="android:textColorSecondary">@color/t_on_variant</item>
+        <item name="android:textColorHint">@color/t_outline</item>
+    </style>
+</resources>

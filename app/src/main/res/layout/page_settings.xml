@@ -1,0 +1,43 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageSettings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="110dp"
+    android:scrollbars="none"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tema" android:textColor="@color/t_on_surface" android:textSize="16sp" android:textStyle="bold"/>
+            <RadioGroup android:id="@+id/rgTheme" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:orientation="vertical"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Private DNS" android:textColor="@color/t_on_surface" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvDnsState" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/t_on_variant" android:textSize="12sp"/>
+            <RadioGroup android:id="@+id/rgDns" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:orientation="vertical"/>
+            <EditText android:id="@+id/etDnsHost" style="@style/Tweak.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="nama.host.dns" android:inputType="textUri" android:singleLine="true" android:enabled="false"/>
+            <Button android:id="@+id/btnDnsApply" style="@style/Tweak.Button.Filled" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Terapkan DNS"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FPS counter" android:textColor="@color/t_on_surface" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Overlay API grafis, FPS, dan GPU di atas aplikasi; berjalan di latar belakang. Bisa digeser. " android:textColor="@color/t_on_variant" android:textSize="12sp"/>
+            <Switch android:id="@+id/swFpsSet" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="Aktifkan FPS Counter" android:textColor="@color/t_on_surface"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lainnya" android:textColor="@color/t_on_surface" android:textSize="16sp" android:textStyle="bold"/>
+            <EditText android:id="@+id/etAuthor" style="@style/Tweak.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nama author untuk script yang disimpan" android:inputType="text" android:singleLine="true"/>
+            <Switch android:id="@+id/swDebug" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="Mode debug" android:textColor="@color/t_on_surface"/>
+            <Button android:id="@+id/btnDebugLog" style="@style/Tweak.Button.Tonal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Buka Debug log" android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

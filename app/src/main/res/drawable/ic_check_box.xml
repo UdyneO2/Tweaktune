@@ -1,0 +1,24 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/t_primary"/>
+                    <size android:width="26dp" android:height="26dp"/>
+                </shape>
+            </item>
+            <item
+                android:drawable="@drawable/ic_tick"
+                android:left="3dp"
+                android:top="3dp"
+                android:right="3dp"
+                android:bottom="3dp"/>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="2dp" android:color="@color/t_outline"/>
+            <size android:width="26dp" android:height="26dp"/>
+        </shape>
+    </item>
+</selector>

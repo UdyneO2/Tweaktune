@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/t_on_surface"/>
+    <item android:color="@color/t_on_variant"/>
+</selector>

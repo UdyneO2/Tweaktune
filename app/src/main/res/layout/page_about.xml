@@ -1,0 +1,35 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageAbout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="110dp"
+    android:scrollbars="none"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="20dp">
+            <TextView android:id="@+id/tvAboutName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tweak Tuner" android:textColor="@color/t_on_surface" android:textSize="24sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvAboutVer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/t_accent_text" android:textSize="14sp" android:textStyle="bold"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Menerapkan tweak tuning lewat Shizuku: profil, game overlay, kunci FPS, display, ukuran layar, renderer per game, dan FPS counter. Core C (tweakcore) membangun semua script." android:textColor="@color/t_on_variant" android:textSize="13sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perangkat &amp; akses" android:textColor="@color/t_on_surface" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvAboutInfo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="monospace" android:textColor="@color/t_on_variant" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Changelog" android:textColor="@color/t_on_surface" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvAboutLog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/t_on_variant" android:textSize="13sp"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="16dp" android:gravity="center" android:text="@t.me/mnrdnn" android:textColor="@color/t_on_variant" android:textSize="13sp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,47 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageLauncher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="110dp"
+    android:scrollbars="none"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvLauncherInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Script tersimpan di /sdcard/tweak. Simpan profil atau modul dari sini, lalu jalankan kapan saja."
+            android:textColor="@color/t_on_variant"
+            android:textSize="13sp" android:paddingBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnSaveProfile" style="@style/Tweak.Button.Filled" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Simpan"/>
+            <Button android:id="@+id/btnSaveModules" style="@style/Tweak.Button.Tonal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Modul"/>
+            <Button android:id="@+id/btnReloadScripts" style="@style/Tweak.Button.Tonal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Muat ulang"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llScripts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+        <TextView
+            android:id="@+id/tvScriptsEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/t_on_variant"
+            android:textSize="14sp" android:paddingTop="24dp" android:gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>
