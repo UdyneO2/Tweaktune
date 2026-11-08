@@ -4,8 +4,9 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-val ksPath: String? = System.getenv("KEYSTORE") ?: (findProperty("KEYSTORE") as String?)
-fun secret(name: String): String? = System.getenv(name) ?: (findProperty(name) as String?)
+// Versi bisa di-override dari CI: -PversionName=1.2-beta -PversionCode=12
+val vName = (project.findProperty("versionName") as String?) ?: "1.2-beta"
+val vCode = (project.findProperty("versionCode") as String?)?.toIntOrNull() ?: 3
 
 android {
     namespace = "com.tweak.tuner"
