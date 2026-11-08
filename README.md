@@ -13,12 +13,6 @@ sebagai uid shell lewat Shizuku UserService.
 - **Daftar game** satu card: ikon, nama, paket, pilih semua / kosongkan, toggle semua aplikasi.
 - **Mode debug** (Pengaturan) memunculkan menu Debug log.
 
-## Changelog
-- **1.9** Navigasi bawah 1 baris 4 menu, masing-masing satu halaman: Script launcher (daftar script + author/tanggal), Terminal (perintah tweakcore langsung), Tentang, Pengaturan (tema, DNS, FPS counter, mode debug, author). Titik tiga diganti toggle tema malam. Fix: status profil tidak berubah setelah dijalankan; reset semua kembali ke Standar; FPS counter `novalid` di Android 14+ (fallback timestats).
-- **1.8** Profil dipilih lewat card (tab dihapus) + deteksi profil aktif saat dibuka. Menu Debug log hanya saat mode debug aktif. Perbaikan FPS counter yang selalu 0 (layer salah pilih, fallback timestats, log ke Debug log). Card renderer hanya info; terapkan/reset lewat tekan lama game. Game + daftar jadi satu card.
-- **1.7** FPS counter overlay + info GPU. Tombol floating dihapus. Kartu driver rata dua kolom. Daftar game gaya Pengaturan Apps.
-- **1.6** Mode Gaming/Harian/Standar. Modul terpisah dengan backup masing-masing. Deteksi dan switch renderer per game. Reset diperbaiki (loop tidak berhenti di baris pertama, backup gagal tidak dihapus).
-- **1.5** Versi dasar: profil Gaming/Daily, game_overlay, game_driver, wm size/density.
 
 ## Build APK
 1. Android Studio (Koala+) -> Open folder ini -> pasang NDK + CMake 3.22.1 -> Sync.
